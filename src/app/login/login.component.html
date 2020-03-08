@@ -1,0 +1,16 @@
+
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<div>
+  账户:
+  <input style="width: 200px;height: 20px;" type="text" formControlName="phone">
+</div>
+<div style="padding-top: 20px;">
+  密码:
+  <input style="width: 200px;height: 20px;" type="password" formControlName="password">
+</div>
+  <div style="padding-top: 20px;">
+    <button type="submit"  [disabled]="!loginForm.valid">登录</button>
+  </div>
+
+</form>
